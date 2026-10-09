@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Корпоративная книга PHOTO LAB</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<div id="gate" hidden>
+  <div class="gate">
+    <form id="gate-form" novalidate>
+      <div class="strip" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="in">
+        <h1>Корпоративная книга PHOTO LAB</h1>
+        <p>Регламенты для сотрудников точек. Код доступа выдаёт управляющий.</p>
+        <label for="code">Код доступа</label>
+        <input id="code" inputmode="numeric" autocomplete="off" maxlength="8" required>
+        <p class="err" id="gate-err" role="alert"></p>
+        <button type="submit">Открыть книгу</button>
+        <p class="hint">Это демо. Код для просмотра: <b>2026</b></p>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div id="app" hidden>
+  <header class="top">
+    <div class="strip" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="top-in">
+      <a class="brand" href="#/"><b>PHOTO LAB</b><span>Корпоративная книга</span></a>
+      <form class="search" role="search" id="search-form">
+        <label for="q" class="sr" style="position:absolute;left:-9999px">Поиск по регламентам</label>
+        <input id="q" type="search" placeholder="Поиск: брак, перерывы, кружка…" autocomplete="off">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </form>
+    </div>
+  </header>
+  <div class="shell">
+    <nav class="side" aria-label="Роли">
+      <h2>Роли</h2>
+      <div id="side-roles"></div>
+      <div class="side-foot"><a href="#/about">Как устроен справочник</a></div>
+    </nav>
+    <main id="view" tabindex="-1"></main>
+  </div>
+  <footer class="foot">Демо-прототип. Тексты регламентов условные, показывают структуру – при сборке заменяются главами из вашей корпоративной книги. <a href="#/about">Подробнее</a></footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
